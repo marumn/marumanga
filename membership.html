@@ -1,4 +1,4 @@
-<header>
+<header onclick="goHome()" style="cursor:pointer;">
   <div class="header-content">
     <img src="logo.png" alt="Maru Manga Logo">
     <h1>Maru Manga</h1>
@@ -226,3 +226,9 @@ header h1 {
 
 </body>
 </html>
+
+<script>
+  function goHome() {
+    window.location.href = "index.html"; // change if your homepage has a different name
+  }
+</script>
