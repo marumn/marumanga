@@ -12,6 +12,21 @@
 <title>Membership</title>
 
 <style>
+  .back-btn {
+  margin: 15px;
+  padding: 8px 14px;
+  background: transparent;
+  border: 1px solid #ef4444;
+  color: #ef4444;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.back-btn:hover {
+  background: #ef4444;
+  color: white;
+}
+  
     header {
   background: #111;
   padding: 15px;
@@ -144,7 +159,9 @@ header h1 {
 </head>
 
 <body>
-
+  
+<button onclick="goBack()" class="back-btn">← Back</button>
+  
 <div class="card">
   <h1>MEMBERSHIP</h1>
   <div class="price">10,000₮</div>
@@ -222,6 +239,11 @@ header h1 {
 
   gmailInput.addEventListener("input", updateOutput);
   discordInput.addEventListener("input", updateOutput);
+
+<script>
+  function goBack() {
+    window.history.back();
+  }
 </script>
 
 </body>
