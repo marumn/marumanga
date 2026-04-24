@@ -239,13 +239,18 @@ header h1 {
 
   gmailInput.addEventListener("input", updateOutput);
   discordInput.addEventListener("input", updateOutput);
-
+</script>
+  
 <script>
   function goBack() {
-    window.history.back();
+    if (window.history.length > 1) {
+      window.history.back();
+    } else {
+      window.location.href = "index.html";
+    }
   }
 </script>
-
+  
 </body>
 </html>
 
