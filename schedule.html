@@ -59,7 +59,14 @@
       background: #e02555;
     }
 
-    .header-content {
+   header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.header-content {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -138,5 +145,11 @@
 
 <a href="index.html" class="back-btn">⬅ Буцах</a>
 
+  <script>
+  function goHome() {
+    window.location.href = "index.html";
+  }
+</script>
+  
 </body>
 </html>
