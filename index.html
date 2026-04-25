@@ -76,6 +76,16 @@ header h1 {
   max-width: 200px;
 }
 
+    .btn-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn-row .main-btn {
+  width: 200px; /* fixed width instead of flex */
+}
+    
     h2 {
       color: #ff2e63;
       margin-top: 40px;
@@ -113,15 +123,17 @@ header h1 {
   </div>
 
 <!-- MAIN BUTTONS -->
-<div style="display: flex; justify-content: center; gap: 10px;">
+<div class="btn-row">
   <button class="main-btn" onclick="openSite()">📖 Манхва унших</button>
   <button class="main-btn" onclick="openSchedule()">📅 Schedule</button>
 </div>
   <h3 style="text-align:center; color:#ff2e63;">
   Эрх хараахан аваагүй юу? Одоо аваарай!
 </h3>
-    <button class="main-btn" onclick="openMembership()">💎 Эрх худалдан авах</button>
-
+    <div style="text-align:center; margin-top: 10px;">
+  <button class="main-btn" onclick="openMembership()">💎 Эрх худалдан авах</button>
+</div>
+  
   <h2>Maru Manhwa: манхва-г хямд төлбөрөөр онлайнаар унших төгс сонголт</h2>
 
   <p>
