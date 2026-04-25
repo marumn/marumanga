@@ -210,9 +210,9 @@ header h1 {
   <div class="section">
     <div class="section-title">ГҮЙЛГЭЭНИЙ ТАЙЛБАР ҮҮСГЭГЧ</div>
 
-    <input id="gmail" type="email" placeholder="Gmail (жишээ: example@gmail.com
+    <input id="gmail" type="email" placeholder="Имэйл (жишээ: example@gmail.com
 )">
-    <input id="discord username" type="text" placeholder="Discord (жишээ: example)">
+    <input id="discord" type="text" placeholder="Discord (жишээ: example)">
 
     <div class="output" id="output">
       Мэдээлэл оруулахыг хүлээж байна…
@@ -255,7 +255,7 @@ header h1 {
       copyBtn.classList.add("active");
       copyBtn.textContent = "Copy";
     } else {
-      output.textContent = "Waiting for input…";
+      output.textContent = "Мэдээлэл оруулахыг хүлээж байна…";
       copyBtn.disabled = true;
       copyBtn.classList.remove("active");
       copyBtn.textContent = "Copy";
