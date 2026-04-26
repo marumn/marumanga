@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ЖАГСААЛТ</title>
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  background-color: #0f0f0f;
+  color: white;
+  margin: 0;
+  padding: 20px;
+  max-width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+    h1 {
+      text-align: center;
+      color: #ff2e63;
+    }
+
+    .schedule {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+    .day {
+      background: #1a1a1a;
+      padding: 15px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+    }
+
+    .day h2 {
+      margin: 0 0 10px;
+      color: #ff2e63;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin: 0;
+    }
+
+    li {
+      margin-bottom: 5px;
+    }
+
+    .back-btn {
+      display: block;
+      width: 200px;
+      margin: 20px auto;
+      text-align: center;
+      padding: 10px;
+      background: #ff2e63;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+    }
+
+    .back-btn:hover {
+      background: #e02555;
+    }
+
+   header {
+  background: #111; /* same dark bar effect */
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid #1f1f2e;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+header img {
+  width: 60px;
+  height: auto;
+}
+
+    * {
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+    .manhwa {
+  background: #1a1a1a;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.manhwa-title {
+  padding: 15px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #ff2e63;
+}
+
+.manhwa-title:hover {
+  background: #222;
+}
+
+.manhwa-content {
+  display: none;
+  padding: 10px 20px;
+  background: #111;
+}
+
+.manhwa-content ul {
+  margin: 0;
+}
+
+    .button-group {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 30px auto;
+  flex-wrap: wrap;
+}
+
+.nav-btn {
+  padding: 10px 20px;
+  background: #ff2e63;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+
+.nav-btn:hover {
+  background: #e02555;
+}
+
+    @media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+ .schedule {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0 5px;
+}
+  .day {
+    padding: 12px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  .header-content {
+    flex-direction: row;
+    gap: 8px;
+  }
+
+  .logo {
+    width: 45px;
+  }
+
+      .day {
+  margin-left: 0;
+  margin-right: 0;
+  border-radius: 10px;
+}   
+}
+  </style>
+</head>
+<body>
+  
+<header onclick="goHome()" style="cursor:pointer;">
+  <div class="header-content">
+    <img src="logo.png" alt="Maru Manhwa Logo" class="logo">
+    <h1>Maru Manhwa</h1>
+  </div>
+</header>
+  
+<h1>📚 H-MANHWA жагсаалт</h1>
+
+<div class="schedule">
+
+  <!-- ONGOING SECTION -->
+  <h2 style="color:#ff2e63;">🔥 Ongoing</h2>
+
+  <div class="manhwa">
+    <div class="manhwa-title" onclick="toggle(this)">
+      mom's friends ⬇
+    </div>
+    <div class="manhwa-content">
+      <ul>
+        <li>Monday - Chapter 6</li>
+        <li>Tuesday - Chapter 7</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="manhwa">
+    <div class="manhwa-title" onclick="toggle(this)">
+      Omniscient Reader ⬇
+    </div>
+    <div class="manhwa-content">
+      <ul>
+        <li>Wednesday - Chapter 120</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- COMPLETED SECTION -->
+  <h2 style="color:#00ffcc;">✅ Completed</h2>
+
+  <div class="manhwa">
+    <div class="manhwa-title" onclick="toggle(this)">
+      The Boxer ⬇
+    </div>
+    <div class="manhwa-content">
+      <ul>
+        <li>Finished</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+<div>
+  <a href="index.html" class="back-btn">⬅ Буцах</a>
+</div>
+
+  <script>
+  function goHome() {
+    window.location.href = "index.html";
+  }
+
+    function toggle(element) {
+  const content = element.nextElementSibling;
+
+  if (content.style.display === "block") {
+    content.style.display = "none";
+  } else {
+    content.style.display = "block";
+  }
+}
+</script>
+  
+</body>
+</html>
