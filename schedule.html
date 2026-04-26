@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Schedule</title>
+  <title>ГАРАЛТ</title>
   <style>
     body {
   font-family: Arial, sans-serif;
@@ -125,6 +125,34 @@ body {
   margin-right: 0;
   border-radius: 10px;
 }
+
+      .manhwa {
+  background: #1a1a1a;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.manhwa-title {
+  padding: 15px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #ff2e63;
+}
+
+.manhwa-title:hover {
+  background: #222;
+}
+
+.manhwa-content {
+  display: none;
+  padding: 10px 20px;
+  background: #111;
+}
+
+.manhwa-content ul {
+  margin: 0;
+}
 }
   </style>
 </head>
@@ -137,58 +165,48 @@ body {
   </div>
 </header>
   
-<h1>📅 Манхва Schedule</h1>
+<h1>📚 Манхва жагсаалт</h1>
 
 <div class="schedule">
 
-  <div class="day">
-    <h2>Даваа (Monday)</h2>
-    <ul>
-      <li>Manhwa 1</li>
-      <li>Manhwa 2</li>
-    </ul>
+  <!-- ONGOING SECTION -->
+  <h2 style="color:#ff2e63;">🔥 Ongoing</h2>
+
+  <div class="manhwa">
+    <div class="manhwa-title" onclick="toggle(this)">
+      Solo Leveling ⬇
+    </div>
+    <div class="manhwa-content">
+      <ul>
+        <li>Monday - Chapter 6</li>
+        <li>Tuesday - Chapter 7</li>
+      </ul>
+    </div>
   </div>
 
-  <div class="day">
-    <h2>Мягмар (Tuesday)</h2>
-    <ul>
-      <li>Manhwa 3</li>
-    </ul>
+  <div class="manhwa">
+    <div class="manhwa-title" onclick="toggle(this)">
+      Omniscient Reader ⬇
+    </div>
+    <div class="manhwa-content">
+      <ul>
+        <li>Wednesday - Chapter 120</li>
+      </ul>
+    </div>
   </div>
 
-  <div class="day">
-    <h2>Лхагва (Wednesday)</h2>
-    <ul>
-      <li>Manhwa 4</li>
-    </ul>
-  </div>
+  <!-- COMPLETED SECTION -->
+  <h2 style="color:#00ffcc;">✅ Completed</h2>
 
-  <div class="day">
-    <h2>Пүрэв (Thursday)</h2>
-    <ul>
-      <li>Manhwa 5</li>
-    </ul>
-  </div>
-
-  <div class="day">
-    <h2>Баасан (Friday)</h2>
-    <ul>
-      <li>Manhwa 6</li>
-    </ul>
-  </div>
-
-  <div class="day">
-    <h2>Бямба (Saturday)</h2>
-    <ul>
-      <li>Manhwa 7</li>
-    </ul>
-  </div>
-
-  <div class="day">
-    <h2>Ням (Sunday)</h2>
-    <ul>
-      <li>Manhwa 8</li>
-    </ul>
+  <div class="manhwa">
+    <div class="manhwa-title" onclick="toggle(this)">
+      The Boxer ⬇
+    </div>
+    <div class="manhwa-content">
+      <ul>
+        <li>Finished</li>
+      </ul>
+    </div>
   </div>
 
 </div>
@@ -199,6 +217,16 @@ body {
   function goHome() {
     window.location.href = "index.html";
   }
+
+    function toggle(element) {
+  const content = element.nextElementSibling;
+
+  if (content.style.display === "block") {
+    content.style.display = "none";
+  } else {
+    content.style.display = "block";
+  }
+}
 </script>
   
 </body>
